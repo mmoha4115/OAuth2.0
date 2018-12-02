@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect,jsonify, url_for, flash
 app = Flask(__name__)
-
+import uuid
+from flask import session as login_session
 from sqlalchemy import create_engine, asc
 from sqlalchemy.orm import sessionmaker
 from database_setup import Base, Restaurant, MenuItem
@@ -136,7 +137,11 @@ def deleteMenuItem(restaurant_id,menu_id):
     else:
         return render_template('deleteMenuItem.html', item = itemToDelete)
 
-
+@app.route('/login')
+def login():
+    state = uuid.uuid4()
+    login_session['state']=state
+    return render_template('login.html')
 
 
 if __name__ == '__main__':

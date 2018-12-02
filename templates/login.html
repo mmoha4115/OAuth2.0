@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+
+
+</head>
+
+
+<body>  
+
+
+<!-- GOOGLE PLUS SIGN IN BUTTON-->
+
+          
+          <div id="signinButton" class="btn btn-success btn-lg">
+          <span class="g-signin2"
+            data-scope="openid email"
+            data-client_id="223332205603-327lruvgkg1eqrel86s1teaai4rtc7qt.apps.googleusercontent.com"
+            data-redirect_uri="postmessage"
+            state = 
+            data-cookiepolicy="single_host_origin"
+            data-callback="signInCallback"
+            data-approvalprompt="force">
+          </span>
+        </div>
+        <div id="result"></div>
+
+
+
+<!--END GOOGLE PLUS SIGN IN BUTTON -->
+
+  </body>
+
+</html>
